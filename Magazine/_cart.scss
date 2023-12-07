@@ -1,0 +1,215 @@
+.title {
+    padding: 60px;
+    background-color: #F8F3F4;
+    margin-bottom: 96px;
+    &_main {
+        @include fontStyle($siteColor, 24px, 400);
+        @include center();
+    }
+}
+
+.basket {
+    @include center();
+    display: flex;
+    gap: 128px;
+    margin-bottom: 128px;
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &_right {
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+    }
+    &_item {
+        display: flex;
+        gap: 30px;
+        position: relative;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        width: 650px;
+        &:hover {
+            transform: scale(1.005);
+        }
+        &_close {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            &:hover path {
+                fill: $siteColor;
+            }
+            & path {
+                transition: 0.2s;
+            }
+        }
+        &_form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 360px;
+            &_submit {
+                @include fontStyle(#4A4A4A, 11px, 300);
+                width: 120px;
+                padding: 12px 15px;
+                border: 1px solid #A4A4A4;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $siteColor;
+                    border-color: $siteColor;
+                    color: white;
+                }
+            }
+            &_input {
+                padding: 14px 16px;
+                border: 1px solid #A4A4A4;
+                @include fontStyle(#4A4A4A, 13px, 300);
+            }
+            &_title-input {
+                @include fontStyle(#222, 16px, 300);
+            }
+        }
+        &_title {
+            @include fontStyle(#222, 24px, 400);
+            margin: 22px 0 42px 0;
+        }
+        &_text {
+            @include fontStyle(#575757, 22px, 400);
+            margin-bottom: 6px;
+            &_count {
+                @include fontStyle(#575757, 18px, 400);
+                width: 44px;
+                height: 25px;
+                text-align: center;
+                border: 1px solid #EAEAEA;
+            }
+            &_price {
+                color: $siteColor;
+            }
+        }
+        &_count {
+            display: flex;
+            gap: 20px;
+        }
+    }
+    &_buy {
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F3F3;
+        padding: 40px 0 40px 0;
+        width: 360px;
+        &_total {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-right: 34px;
+            &_sub {
+                @include fontStyle(#4A4A4A, 11px, 400);
+                margin-bottom: 12px;
+            }
+            &_grand {
+                @include fontStyle(#4A4A4A, 16px, 300);
+                &_price {
+                    @include fontStyle($siteColor, 16px, 700);
+                    margin-bottom: 21px;
+                }
+            }
+        }
+        &_line {
+            text-align: center;
+            margin-bottom: 17px;
+        }
+        &_btn {
+            @include fontStyle(white, 16px, 300);
+            margin: 0 auto;
+            padding: 15px 43px;
+            background-color: $siteColor;
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 0 10px $siteColor;
+            }
+            &_test {
+                padding-top: 10px;
+            }
+        }
+    }
+    &_options {
+        display: flex;
+        gap: 182px;
+        margin-top: 32px;
+        &_item {
+            border: 1px solid #A4A4A4;
+            padding: 17px 41px;
+            @include fontStyle(black, 14px, 300);
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 0 3px black;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .basket {
+        flex-direction: column;
+        align-items: center;
+        &_item {
+            width: 734px;
+        }
+        &_right {
+            display: flex;
+            flex-direction: row;
+            max-width: 734px;
+        }
+        &_options {
+            gap: 48px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .logos-visible {
+        display: none;
+    }
+    .basket {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        &_item {
+            width: 358px;
+            &_title {
+                @include fontStyle(#222, 16px, 400);
+                margin-top: 13px;
+                margin-bottom: 25px;
+            }
+            &_close {
+                top: 17px;
+                right: 12px;
+            }
+            &_text {
+                @include fontStyle(#222, 14px, 400);
+            }
+            &_img {
+                width: 144px;
+                height: 200px;
+            }
+        }
+        &_right {
+            flex-direction: column;
+            max-width: 358px;
+        }
+        &_left {
+            align-items: center;
+        }
+        &_options {
+            gap: 9px;
+            width: 358px;
+            justify-content: space-between;
+            &_item {
+                padding: 9px 18px;
+                @include fontStyle(#222, 12px, 400);
+            }
+        }
+    }
+}

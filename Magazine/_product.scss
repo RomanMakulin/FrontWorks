@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0
+}
+
+.menu-block {
+    background-color: #F8F3F4;
+}
+
+.menu {
+    @include flex(space-between);
+    padding: 60px 0 60px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+    &_background {
+        background-color: #F8F3F4;
+        ;
+    }
+    &_title {
+        @include fontStyle($siteColor, 24px, 400);
+    }
+    &_nav>a:not(:last-child)::after {
+        content: " /";
+    }
+    &_nav>a:last-child {
+        @include fontStyle($siteColor, 14px, 700);
+    }
+    &_nav>a:not(:last-child) {
+        @include fontStyle(#636363, 14px, 300);
+    }
+}
+
+.width_img {
+    margin: 0 auto;
+}
+
+.carousel-item {
+    background-color: #F7F7F7;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+.carusel_nav svg path {
+    fill: black;
+    transition: 0.2s;
+}
+
+.carusel_nav {
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+.carusel_nav:hover svg path {
+    fill: $siteColor;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.product {
+    background-color: white;
+    max-width: 1140px;
+    display: grid;
+    justify-items: center;
+    padding: 65px;
+    border: 1px solid #EAEAEA;
+    margin: -35px auto;
+    padding-top: -100px;
+    margin-bottom: 129px;
+    &_subtitle {
+        @include fontStyle($siteColor, 14px, 300);
+        margin-bottom: 12px;
+    }
+    &_title {
+        @include fontStyle(#4D4D4D, 18px, 300);
+        margin-bottom: 48px;
+    }
+    &_text {
+        @include fontStyle(#4D4D4D, 14px, 300);
+        max-width: 555px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    &_line {
+        margin-bottom: 12px;
+    }
+    &_price {
+        @include fontStyle($siteColor, 24px, 300);
+        margin-bottom: 65px;
+    }
+    &_box {
+        border-top: 1px solid #EAEAEA;
+        display: flex;
+        gap: $cartGap;
+        padding-top: 65px;
+        padding-bottom: 45px;
+        &_nav {
+            &_name {
+                @include fontStyle(#6F6E6E, 14px, 400);
+                & svg {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    &_add {
+        color: $siteColor;
+        display: flex;
+        gap: 10px;
+        padding: 15px 30px;
+        border: 1px solid $siteColor;
+        transition: 0.5s;
+    }
+    &_add:hover path {
+        fill: white;
+    }
+    &_add:hover {
+        color: white;
+        background-color: $siteColor;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        @include centerAdaptiv(16px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        @include centerAdaptiv(16px);
+    }
+    .none {
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .product {
+        padding: 65px 12px;
+        &_box {
+            gap: 24px;
+            &_nav_name {
+                @include fontStyle(#6F6E6E, 10px, 400);
+                & svg {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

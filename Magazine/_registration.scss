@@ -1,0 +1,184 @@
+.registration {
+    display: flex;
+    gap: 128px;
+    max-width: 1140px;
+    margin: 64px auto 113px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__titleName {
+            @include fontStyle(#222, 16px, 300);
+        }
+        &__input {
+            max-width: 360px;
+            padding: 13px 0 16px 17px;
+            @include fontStyle(#B1B1B1, 13px, 300);
+        }
+        &__choiceSex {
+            margin: 10px 0 10px;
+            display: flex;
+            gap: 20px;
+            &__check {
+                display: flex;
+                gap: 10px;
+                &__element:checked {
+                    background-color: $siteColor;
+                }
+                &__text {
+                    @include fontStyle(#222, 11px, 300);
+                }
+                &__element {
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8.5' cy='8.5' r='8' stroke='%23A4A4A4'/%3e%3c/svg%3e ");
+                }
+            }
+        }
+        &__inputInfo {
+            @include fontStyle(#B1B1B1,
+            13px,
+            300);
+            width: 360px;
+        }
+        &__submit {
+            @include fontStyle(#FFF,
+            14px,
+            400);
+            width: 167px;
+            background-color: $siteColor;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 16px 29px;
+            justify-content: center;
+            transition: 0.2s;
+            &:hover {
+                box-shadow: 0 0 3px $siteColor;
+                transform: scale(1.02);
+            }
+        }
+    }
+    &__advantages {
+        max-width: 652px;
+        &__title {
+            @include fontStyle(#222,
+            24px,
+            300);
+            margin-bottom: 22px;
+        }
+        &__subtitle {
+            @include fontStyle(#222,
+            24px,
+            300);
+            margin-bottom: 21px;
+        }
+        &__list-item {
+            @include fontStyle(#222,
+            24px,
+            300);
+            display: flex;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+    background-image: url("./img/li.png");
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"]:checked+label,
+input[type="radio"]:not(:checked)+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+input[type="radio"]:checked+label:before,
+input[type="radio"]:not(:checked)+label:before {
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #e145a3;
+}
+
+input[type="checkbox"]:not(:checked)+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked+label:after,
+input[type="radio"]:checked+label:after {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .registration {
+        @include centerAdaptiv(16px);
+        gap: 55px;
+        &__advantages__title {
+            font-size: 16px;
+        }
+        &__advantages__list-item {
+            font-size: 16px;
+        }
+        &__advantages__subtitle {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .registration {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 426px) {
+    .registration {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

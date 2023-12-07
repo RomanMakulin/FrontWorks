@@ -1,0 +1,57 @@
+@mixin flex($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
+
+@mixin grid() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: $cartGap;
+}
+
+@mixin fontStyle($color, $fontSize, $fontWeight) {
+    color: $color;
+    font-family: Lato;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin center($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin emailBorder() {
+    border: none;
+    padding: 12px 10px;
+}
+
+@mixin paddingBox($firstPadding, $secondPadding) {
+    padding: $firstPadding $secondPadding;
+    background-color: #222224;
+}
+
+@mixin openMenu($width) {
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    width: $width;
+}
+
+@mixin flexFilter() {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@mixin center() {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@mixin centerAdaptiv($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
