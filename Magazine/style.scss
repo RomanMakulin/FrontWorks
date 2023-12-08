@@ -46,6 +46,7 @@
     }
     
     .burger-menu {
+        cursor: pointer;
         position: absolute;
         top: 80px;
         right: 0px;
@@ -189,6 +190,14 @@
                 justify-content: center;
                 gap: 11px;
                 color: #FFFFFF;
+                cursor: pointer;
+                &:hover path {
+                    fill: $siteColor;
+                    box-shadow: 0px 0px 5px rgb(255, 0, 0);
+                }
+                &:hover {
+                    color: $siteColor;
+                }
             }
         }
         &_cart:hover &_cart_add {
@@ -206,6 +215,7 @@
             color: $siteColor;
             margin-bottom: 95px;
             transition: 0.5s;
+            cursor: pointer;
         }
         &_browse:hover {
             background-color: $siteColor;
@@ -317,6 +327,11 @@
             16px,
             400);
         }
+    }
+    
+    .user-bucket {
+        width: 1140px;
+        margin: 0 auto;
     }
     
     @media (max-width: 1024px) {

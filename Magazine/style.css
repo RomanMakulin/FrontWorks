@@ -877,6 +877,7 @@ a {
 }
 
 .burger-menu {
+  cursor: pointer;
   position: absolute;
   top: 80px;
   right: 0px;
@@ -1072,6 +1073,14 @@ a {
   justify-content: center;
   gap: 11px;
   color: #FFFFFF;
+  cursor: pointer;
+}
+.items_cart_add:hover path {
+  fill: #F16D7F;
+  box-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+.items_cart_add:hover {
+  color: #F16D7F;
 }
 .items_cart:hover .items_cart_add {
   display: flex;
@@ -1087,6 +1096,7 @@ a {
   color: #F16D7F;
   margin-bottom: 95px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .items_browse:hover {
   background-color: #F16D7F;
@@ -1209,6 +1219,11 @@ a {
   font-family: Lato;
   font-size: 16px;
   font-weight: 400;
+}
+
+.user-bucket {
+  width: 1140px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
