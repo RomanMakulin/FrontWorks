@@ -47,7 +47,10 @@ itemsArr.forEach(element => {
 
     containerEl.appendChild(elementDiv);
 
-    addElementBasket(element, addCartEl);
+    const bucketContainer = document.querySelectorAll(".user-bucket");
+    if (bucketContainer.length != 0) {
+        addElementBasket(element, addCartEl);
+    }
 
 });
 

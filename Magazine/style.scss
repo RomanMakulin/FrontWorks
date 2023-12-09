@@ -295,6 +295,7 @@
         &_right_submit {
             background-color: $siteColor;
             @include emailBorder();
+            cursor: pointer;
             color: white;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;

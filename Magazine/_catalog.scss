@@ -41,6 +41,7 @@
     &_filter {
         position: absolute;
         margin-top: -20px;
+        cursor: pointer;
         &[open] {
             @include openMenu(360px);
             padding-left: 10px;
@@ -101,6 +102,7 @@
     gap: $cartGap;
     position: absolute;
     right: 430px;
+    cursor: pointer;
     &_head {
         @include flexFilter();
         @include fontStyle(#6F6E6E, 14px, 400);
