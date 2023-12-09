@@ -160,6 +160,10 @@
             background-color: #F8F8F8;
             padding-bottom: 20px;
             position: relative;
+            transition: 0.3s;
+            &:hover {
+                transform: scale(1.01);
+            }
             &_img {
                 width: 100%;
                 margin-bottom: 25px;
@@ -180,8 +184,9 @@
             }
             &_add {
                 position: absolute;
-                top: 32%;
-                left: 32%;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 border: 1px solid #fff;
                 width: 139px;
                 height: 44px;
@@ -202,10 +207,13 @@
         }
         &_cart:hover &_cart_add {
             display: flex;
+            transition: 0.5s;
         }
         &_cart:hover &_cart_img {
             -webkit-filter: brightness(0.5);
             filter: brightness(0.5);
+            box-shadow: 0 0 2px black;
+            transition: 0.5s;
         }
         &_browse {
             grid-column: 1 / span 3;
@@ -216,6 +224,7 @@
             margin-bottom: 95px;
             transition: 0.5s;
             cursor: pointer;
+            transition: 0.5s;
         }
         &_browse:hover {
             background-color: $siteColor;
@@ -329,6 +338,11 @@
     .user-bucket {
         width: 1140px;
         margin: 0 auto;
+        &_title {
+            text-align: center;
+            margin-top: 96px;
+            margin-bottom: 24px;
+        }
     }
     
     @media (max-width: 1024px) {
